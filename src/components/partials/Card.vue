@@ -17,7 +17,10 @@ export default {
     <div class="card">
       <img :src="image" class="card-img-top" :alt="name">
       <div class="card-body">
-        This is some text within a card body.
+        <h4 class="card-title">{{ name }}</h4>
+        <h5 class="card-title mt-3">{{ status }}</h5>
+        <h5 class="card-title">{{ species }}</h5>
+
       </div>
     </div>
   </div>
