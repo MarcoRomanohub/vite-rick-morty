@@ -17,7 +17,7 @@ export default {
 <template>
   <div class="text-center my-5 container">
 
-    <div class="row row-cols-3 ">
+    <div class="row row-cols-4 ">
       <Card v-for="card in this.store.cardsList" :key="card.id" :name="card.name" :status="card.status"
         :species="card.species" :image="card.image" />
     </div>
