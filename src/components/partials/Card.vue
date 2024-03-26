@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="col mb-5 ">
+  <div class="col mb-5">
     <div class="card border-0 mx-3">
       <img :src="image" class="card-img-top" :alt="name">
       <div class="card-body">
@@ -38,10 +38,14 @@ img {
 }
 
 .Alive {
-  background-color: rgba(0, 128, 0, 0.555);
+  background-color: rgba(1, 168, 1, 0.655);
 }
 
 .Dead {
   background-color: red;
+}
+
+.card{
+  background-color:  rgba(152, 7, 152, 0);
 }
 </style>

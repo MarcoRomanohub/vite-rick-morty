@@ -23,15 +23,22 @@ export default {
       })
         .then(result => {
           this.store.cardsList = result.data.results
-          console.log(this.store.cardsList);
         })
         .catch(error => {
           console.log(error);
+        })
+    },
+    getAllNames(){
+      axios.get(this.store.nameUrl)
+        .then(res => {
+          this.store.nameList = res.data.results.map(item => item.name);
+          console.log(this.store.nameList);
         })
     }
   },
   mounted() {
     this.getApi()
+    this.getAllNames()
   }
 }
 
@@ -44,6 +51,6 @@ export default {
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use './assets/scss/main.scss';
 </style>
