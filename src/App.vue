@@ -17,9 +17,7 @@ export default {
     getApi() {
 
       axios.get(this.store.apiUrl, {
-        params: {
-
-        }
+        params: store.queryParams
       })
         .then(result => {
           this.store.cardsList = result.data.results
@@ -46,7 +44,7 @@ export default {
 
 <template>
 
-  <Header />
+  <Header @startSearch="getApi" />
   <Main />
 
 </template>
